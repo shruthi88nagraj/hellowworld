@@ -21,7 +21,6 @@
     "managed_image_name": "linux_june",
 
     "location": "West US",
-    "build_resource_group_name": "UdacityProject1",
     "vm_size": "Standard_DS2_v2",
 
     "azure_tags": {
