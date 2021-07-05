@@ -7,8 +7,8 @@
   "builders": [{
     "type": "azure-arm",
 
-    "client_id": "bd1b4074-62f8-4eef-9dba-3ea55d55daa4",
-    "client_secret": "4pb8zaNwY4V.AzxSQa-OT7_FnV26A.u0Ha",
+    "client_id": "096f0acb-089a-4ae9-8f40-34ed4370fd4c",
+    "client_secret": "A9YlD-rrpN4P_58vXtvBv1zAbjzAO9vwi-",
     "tenant_id": "4918e021-36db-426e-bc35-e064ff331608",
     "subscription_id": "88fced02-58f5-414a-b306-f817209e9f92",
 
