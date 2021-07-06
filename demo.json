@@ -21,7 +21,7 @@
     "managed_image_name": "linux_june",
 
     "location": "West US",
-    "vm_size": "Standard_DS2_v2",
+    "vm_size": "Standard_DS2_v3",
 
     "azure_tags": {
       "tags": "UdacityPoject1"
@@ -29,9 +29,11 @@
   }],
   "provisioners": [{
     
-    "inline" :["echo 'Hello, World!' > index.html", "nohup busybox httpd -f -p 80 &"],
-    "inline_shebang": "/bin/sh -x",
-    "type": "shell",
-    "execute_command": "chmod +x {{ .Path }}; {{ .Vars }} sudo -E sh '{{ .Path }}'"
+    "inline": [
+      "apt-get update",
+      "apt-get upgrade -y"
+  ],
+  "inline_shebang": "/bin/sh -x",
+  "type": "shell"
   }]
 }
