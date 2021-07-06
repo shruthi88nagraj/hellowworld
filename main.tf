@@ -15,6 +15,10 @@ provider "azurerm" {
   version = "=1.44.0"
 }
 
+data "azurerm_image" "image" {
+  name                = "HWPackerImage"
+  resource_group_name = "Terraform-Azure-Beginners"
+}
 # First we'll create a resource group. In Azure every resource belongs to a 
 # resource group. Think of it as a container to hold all your resources. 
 # You can find a complete list of Azure resources supported by Terraform here:
@@ -130,10 +134,7 @@ resource "azurerm_virtual_machine" "site" {
   delete_os_disk_on_termination = "true"
 
   storage_image_reference {
-    publisher = "${var.image_publisher}"
-    offer     = "${var.image_offer}"
-    sku       = "${var.image_sku}"
-    version   = "${var.image_version}"
+    id = "${var.imageID}"
   }
 
   storage_os_disk {

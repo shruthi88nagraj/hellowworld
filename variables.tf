@@ -55,25 +55,30 @@ variable "vm_size" {
   default     = "Standard_A0"
 }
 
-variable "image_publisher" {
-  description = "Name of the publisher of the image (az vm image list)"
-  default     = "Canonical"
+# variable "image_publisher" {
+#   description = "Name of the publisher of the image (az vm image list)"
+#   default     = "Canonical"
+# }
+
+# variable "image_offer" {
+#   description = "Name of the offer (az vm image list)"
+#   default     = "UbuntuServer"
+# }
+
+# variable "image_sku" {
+#   description = "Image SKU to apply (az vm image list)"
+#   default     = "16.04-LTS"
+# }
+
+variable "imageID"{
+  description = "Image ID of Virtual machines created by Packer"
+  default = "/subscriptions/88fced02-58f5-414a-b306-f817209e9f92/resourceGroups/Udacityproject1/providers/Microsoft.Compute/images/linux_june"
 }
 
-variable "image_offer" {
-  description = "Name of the offer (az vm image list)"
-  default     = "UbuntuServer"
-}
-
-variable "image_sku" {
-  description = "Image SKU to apply (az vm image list)"
-  default     = "16.04-LTS"
-}
-
-variable "image_version" {
-  description = "Version of the image to apply (az vm image list)"
-  default     = "latest"
-}
+# variable "image_version" {
+#   description = "Version of the image to apply (az vm image list)"
+#   default     = "latest"
+# }
 
 variable "admin_username" {
   description = "Administrator user name"
